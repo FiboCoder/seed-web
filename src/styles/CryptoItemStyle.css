@@ -1,0 +1,14 @@
+.crypto-item-container{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: stretch;
+}
+
+.crypto-item-name-symbol-container{
+
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+}
