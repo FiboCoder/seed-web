@@ -1,10 +1,12 @@
+import TransactionsView from "../views/TransactionsView";
+
 const TransactionsController = () =>{
 
     return(
 
-        <TransactionsController>
+        <TransactionsView>
             
-        </TransactionsController>
+        </TransactionsView>
     );
 }
 export default TransactionsController;

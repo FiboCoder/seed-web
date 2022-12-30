@@ -1,0 +1,78 @@
+.transaction-item-container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+}
+
+.transaction-item-container:hover{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    background-color: #F2F2F2;
+    cursor: pointer;
+}
+.transaction-item-subcontainer{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: stretch;
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.divider{
+
+    height: 1px;
+    align-self: stretch;
+    background-color: #dddddd;
+    
+}
+
+.transaction-item-category-icon-container{
+
+    background-color: red;
+    border-radius: 50%;
+    padding: 16px;
+}
+
+.transaction-item-category-icon{
+
+    font-size: 24px;
+    color: white;
+}
+
+.transaction-item-title-description-container{
+
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    margin-left: 10px;
+}
+
+.transaction-item-title-text{
+
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.transaction-item-title-description{
+
+
+}
+
+.transaction-item-value-text{
+
+    font-size: 18px;
+    font-weight: 700;
+}

@@ -1,0 +1,159 @@
+.cryptocoins-view-container{
+
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    flex-direction: row;
+    background-color: #F2F2F2;
+}
+
+/*---------- CRYPTOCOINS ----------*/
+
+.cryptocoins-list-container{ 
+    display: flex;
+    width: 34%;
+    padding-right: 20px;
+    padding: 10px;
+    flex-direction: column;
+    align-self: stretch;
+
+}
+
+.cryptocoins-list-container-title-text{
+
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cryptocoins-list{
+
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-self: stretch;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*---------- CRYPTOCOINS ----------*/
+
+/*---------- CRYPTOCOIN DETAILS ----------*/
+
+.crypto-details-container{
+
+    display: flex;
+    flex: 1;
+    padding-right: 20px;
+    padding: 10px;
+    flex-direction: column;
+    align-self: stretch;
+    justify-self: stretch;
+}
+
+.crypto-details-container-title-text{
+
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.crypto-details-main-container{
+
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.crypto-details-crypto-name-text{
+
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+
+}
+
+.crypto-details-crypto-symbol-text{
+
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #565656;
+}
+
+.crypto-details-crypto-price-container{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.crypto-details-crypto-price-text{
+
+    margin-right: 24px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.crypto-details-crypto-price-change-percent-container{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #16C784;
+    padding: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 6px;
+    
+}
+
+.crypto-details-crypto-price-change-percent-icon{
+
+    margin-right: 4px;
+    font-size: 20px;
+    color: white;
+}
+
+.crypto-details-crypto-price-change-percent-text{
+
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+.crypto-details-chart{
+
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+.crypto-details-about-crypto-title-text{
+
+    display: flex;
+    align-self: stretch;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 16px;
+}
+
+.crypto-details-about-crypto-text{
+
+    display: flex;
+    align-self: stretch;
+    text-align: left;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/*---------- CRYPTOCOIN DETAILS ----------*/

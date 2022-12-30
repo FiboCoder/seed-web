@@ -1,0 +1,144 @@
+
+/*---------- TRANSACTIONS ----------*/
+.transactions-view-container{
+
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    flex-direction: row;
+    align-self: stretch;
+    justify-self: stretch;
+    background-color: #F2F2F2;
+}
+
+.transactions-list-container{
+
+    display: flex;
+    width: 40%;
+    padding-right: 20px;
+    padding: 10px;
+    flex-direction: column;
+    align-self: stretch;
+}
+
+.transactions-list-container-title-text{
+
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.transactions-list{
+
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-self: stretch;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+/*---------- TRANSACTIONS ----------*/
+
+/*---------- RESUME OF MOVIMENTATIONS ----------*/
+
+.resume-of-movimentations-container{
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.resume-of-movimentations-container-title-text{
+
+    display: flex;
+    align-self: stretch;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.resume-of-movimentations-main-container{
+
+    display: flex;
+    flex: 1;
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume-of-movimentations-chart-container{
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-self: stretch;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.resume-of-movimentations-chart-top-container{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: stretch;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.resume-of-movimentations-chart-title{
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.resume-of-movimentations-chart-time-container{
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #e6e6e6;
+}
+
+.resume-of-movimentations-chart-time-container:hover{
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
+
+.resume-of-movimentations-chart-time-text{
+
+    margin-right: 8px;
+}
+
+.resume-of-movimentations-chart-time-icon-arrow-down{
+
+    
+    font-size: 20px;
+}
+
+.chart{
+
+    display: flex;
+    flex: 1;
+    align-self: stretch;
+    justify-self: stretch;
+}
+
+/*---------- RESUME OF MOVIMENTATIONS ----------*/

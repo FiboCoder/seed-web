@@ -1,4 +1,4 @@
-import CryptoItemView from "../views/CryptoItemView";
+import CryptoItemView from "../../views/components/CryptoItemView";
 
 const CryptoItemController = () =>{
 

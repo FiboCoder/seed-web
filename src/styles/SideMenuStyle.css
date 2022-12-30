@@ -1,8 +1,7 @@
 .side-menu-container{
-
-    width: 100%;
+    
     display: flex;
-    height: 100%;
+    width: 100%;
     padding: 24px;
     flex-direction: column;
     background-color: #1D1D1D;
@@ -11,7 +10,7 @@
 .side-menu-option-container{
 
     display: flex;
-    height: 100%;
+    flex: 1;
     flex-direction: column;
 }
 
@@ -53,6 +52,9 @@
     padding: 10px;
     flex-direction: row;
     align-items: center;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
 }
 
 .side-menu-option-dashboard-container:hover{
@@ -64,6 +66,8 @@
     background-color: #404040;
     border-radius: 12px;
     cursor: pointer;
+    border: 0;
+    outline: 0;
 }
 
 .side-menu-option-transactions-container{
@@ -72,6 +76,9 @@
     padding: 10px;
     flex-direction: row;
     align-items: center;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
 }
 
 .side-menu-option-transactions-container:hover{
@@ -83,17 +90,22 @@
     background-color: #404040;
     border-radius: 12px;
     cursor: pointer;
+    border: 0;
+    outline: 0;
 }
 
-.side-menu-option-cryptocurrencies-container{
+.side-menu-option-cryptocoins-container{
 
     display: flex;
     padding: 10px;
     flex-direction: row;
     align-items: center;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
 }
 
-.side-menu-option-cryptocurrencies-container:hover{
+.side-menu-option-cryptocoins-container:hover{
 
     display: flex;
     padding: 10px;
@@ -102,6 +114,8 @@
     background-color: #404040;
     border-radius: 12px;
     cursor: pointer;
+    border: 0;
+    outline: 0;
 }
 
 .side-menu-option-settings-container{
@@ -110,6 +124,9 @@
     padding: 10px;
     flex-direction: row;
     align-items: center;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
 }
 
 .side-menu-option-settings-container:hover{
@@ -121,6 +138,8 @@
     background-color: #404040;
     border-radius: 12px;
     cursor: pointer;
+    border: 0;
+    outline: 0;
 }
 
 .side-menu-logout-container{
@@ -132,6 +151,8 @@
     background-color: #404040;
     border-radius: 12px;
     cursor: pointer;
+    border: 0;
+    outline: 0;
 }
 
 .side-menu-option-icon{

@@ -1,9 +1,8 @@
-import TransactionsController from "./controller/TransactionsController";
-
+import HomeController from "../src/controller/HomeController";
 
 function App() {
   return (
-      <TransactionsController></TransactionsController>
+      <HomeController></HomeController>
   );
 }
 
