@@ -2,9 +2,9 @@
 
     display: flex;
     flex: 1;
-    height: 100vh;
     flex-direction: row;
     background-color: #F2F2F2;
+    padding: 40px;
 }
 
 /*---------- CRYPTOCOINS ----------*/
@@ -12,10 +12,14 @@
 .cryptocoins-list-container{ 
     display: flex;
     width: 34%;
-    padding-right: 20px;
-    padding: 10px;
+    margin-right: 20px;
+    padding: 30px;
     flex-direction: column;
     align-self: stretch;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
+
 
 }
 
@@ -23,17 +27,14 @@
 
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .cryptocoins-list{
 
     display: flex;
-    height: 100%;
     flex-direction: column;
     align-self: stretch;
-    background-color: white;
-    padding: 10px;
     border-radius: 10px;
 }
 
@@ -45,30 +46,30 @@
 
     display: flex;
     flex: 1;
-    padding-right: 20px;
-    padding: 10px;
+    margin-left: 20px;
+    padding: 30px;
     flex-direction: column;
     align-self: stretch;
     justify-self: stretch;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
 }
 
 .crypto-details-container-title-text{
 
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .crypto-details-main-container{
 
     display: flex;
-    height: 100%;
     flex-direction: column;
     align-items: center;
     align-self: stretch;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: white;
+    
 }
 
 .crypto-details-crypto-name-text{
@@ -131,7 +132,7 @@
 
 .crypto-details-chart{
 
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     width: 50%;
 }
 
