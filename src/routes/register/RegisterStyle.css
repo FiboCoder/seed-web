@@ -1,0 +1,156 @@
+.register-container{
+
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    align-items: center;
+    flex-direction: row;
+    background-color: #F2F2F2;
+}
+
+.register-image-box-container{
+
+    display: flex;
+    width: 70%;
+}
+
+.register-box-container{
+
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    background-color: #1D1D1D;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.4);
+}
+
+.register-box-subcontainer{
+
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    padding: 100px;
+}
+
+.register-box-logo-image{
+
+    margin-bottom: 20px;
+}
+
+.register-box-title-text{
+
+    margin-bottom: 80px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.register-box-field-container{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #565656;
+    box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.4);
+
+}
+
+.register-box-field-icon{
+
+    font-size: 24px;
+    color: white;
+    margin-right: 10px;
+}
+
+.register-box-field-text{
+
+    width: 100%;
+    display: flex;
+    align-self: stretch;
+    color: #E6E6E6;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+
+.register-box-btn-container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    margin-top: 40px;
+}
+
+.register-box-error-message-text{
+
+    color: white;
+}
+
+.register-box-register-btn{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-self: stretch;
+    padding: 14px;
+    border-radius: 8px;
+    background-color: #FF7E00;
+    border: 0;
+    margin-top: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.6);
+}
+
+.register-box-register-btn-active{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-self: stretch;
+    padding: 6px;
+    border-radius: 8px;
+    background-color: #FF7E00;
+    border: 0;
+    margin-top: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.6);
+}
+
+.register-box-no-have-account-container{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.register-box-no-have-account-text-1{
+
+    color: white;
+}
+
+.register-box-no-have-account-text-2{
+
+    font-size: 16px;
+    font-weight: 600;
+    color: #FF7E00;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}

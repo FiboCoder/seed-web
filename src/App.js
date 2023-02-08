@@ -1,9 +1,16 @@
-import HomeController from "../src/controller/HomeController";
-import LoginController from "./controller/LoginController";
+import { useContext } from "react";
+import HomeController from "./routes/home/HomeController";
+import LoginController from "./routes/login/LoginController";
+import RoutesController from "./RoutesController";
+import AuthProvider, { AuthContext } from "./utils/AuthProvider";
 
 function App() {
+
   return (
-      <HomeController></HomeController>
+
+      <AuthProvider>
+        <RoutesController></RoutesController>
+      </AuthProvider>
   );
 }
 

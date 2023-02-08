@@ -1,0 +1,184 @@
+
+/*---------- TRANSACTIONS ----------*/
+.transactions-view-container{
+
+    display: flex;
+    flex: 1;
+    padding: 40px;
+    flex-direction: row;
+    background-color: #F2F2F2;
+}
+
+.transactions-list-container{
+
+    display: flex;
+    width: 40%;
+    margin-right: 20px;
+    flex-direction: column;
+    align-self: stretch;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
+}
+
+.transactions-list-container-title-text{
+
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.transactions-list{
+
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-self: stretch;
+    border-radius: 10px;
+
+}
+
+/*---------- TRANSACTIONS ----------*/
+
+/*---------- RESUME OF MOVIMENTATIONS ----------*/
+
+.resume-of-movimentations-container{
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 30px;
+    margin-left: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
+}
+
+.resume-of-movimentations-container-title-text{
+
+    display: flex;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.resume-of-movimentations-main-container{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-of-movimentations-chart-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+
+}
+.resume-of-movimentations-chart-title{
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.resume-of-movimentations-chart-time-button-container{
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+}
+.resume-of-movimentations-chart-time-select-subcontainer{
+
+    width: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 6px;
+    background-color: #E6E6E6;
+    cursor: pointer;
+}
+
+.resume-of-movimentations-chart-time-select-subcontainer:hover{
+
+    width: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 6px;
+    background-color: #CBCBCB;
+    cursor: pointer;
+}
+
+.resume-of-movimentations-chart-time-text{
+
+    margin-right: 8px;
+}
+
+.resume-of-movimentations-chart-time-icon-arrow-down{
+
+    
+    font-size: 20px;
+}
+
+.resume-of-movimentations-chart-time-list-container-transactions{
+
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.resume-of-movimentations-chart-time-list-item-transactions{
+
+    display: flex;
+    flex-direction: column;
+    outline: 0;
+    background-color: transparent;
+    border: 0;
+    padding: 6px;
+}
+
+.resume-of-movimentations-chart-time-list-item-transactions:hover{
+
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: #E6E6E6;
+    outline: 0;
+    border: 0;
+    padding: 6px;
+}
+
+.chart{
+
+    display: flex;
+    flex: 1;
+    align-self: stretch;
+    justify-self: stretch;
+}
+
+/*---------- RESUME OF MOVIMENTATIONS ----------*/
