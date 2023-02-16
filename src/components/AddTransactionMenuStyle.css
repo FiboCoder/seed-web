@@ -1,0 +1,122 @@
+.add-transaction-menu-container-main{
+
+    width: 84%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: flex-end;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 0;
+    outline: 0;
+}
+
+.add-transaction-menu-out-container{
+
+    width: 74%;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+
+}
+.add-transaction-menu-container{
+
+    z-index: 1;
+    width: 26%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.add-transaction-menu-top-container{
+
+    display: flex;
+    align-self: stretch;
+    position: relative;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.add-transaction-close-icon{
+
+    margin-top: -3px;
+    font-size: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.react-select-container{
+
+}
+
+.add-transaction-menu-title-text{
+
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.add-transaction-menu-field-title-text{
+
+    display: flex;
+    align-self: flex-start;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.add-transaction-menu-field-container{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: stretch;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    padding: 12px;
+    background-color: #DBDBDB;
+}
+
+.add-transaction-menu-icon{
+
+    font-size: 24px;
+}
+
+.add-transaction-menu-input{
+
+    width: 100%;
+    display: flex;
+    margin-left: 10px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+
+.add-transaction-menu-button{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    margin-top: 30px;
+    padding: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 6px;
+    border: 0px;
+    outline: 0;
+    background-color: #FF7E00;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}  

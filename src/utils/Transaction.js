@@ -25,10 +25,7 @@ export class Transaction{
             }else if(chartTime == "month"){
 
                 let d = new Date();
-                let m = d.getMonth();
-                d.setMonth(d.getMonth() - 1);
-
-                if (d.getMonth() == m) d.setDate(0);
+                d.setDate(d.getDate() - 30);
                 d.setHours(0, 0, 0, 0);
 
                 const q = query(collection(db, "users", email, "transactions"), where("date", ">=", d.getTime()));
@@ -43,7 +40,7 @@ export class Transaction{
             }else{
 
                 let d = new Date();
-                d.setFullYear(d.getFullYear() - 1);
+                d.setDate(d.getDate() - 365);
                 d.setHours(0, 0, 0, 0);
                 
                 const q = query(collection(db, "users", email, "transactions"), where("date", ">=", d.getTime()));

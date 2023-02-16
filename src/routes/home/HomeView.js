@@ -8,6 +8,9 @@ import SettingsController from "../../fragments/settings/SettingsController";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosAdd } from "react-icons/io";
 import ChartDash from "../../components/ChartDash";
+import TransactionDetails from "../../components/TransactionsDetails";
+import TransactionDetailsController from "../../components/TransactionDetailsController";
+import AddTransactionMenuController from "../../components/AddTransactionMenuController";
 
 const HomeView = (props) =>{
 
@@ -22,7 +25,7 @@ const HomeView = (props) =>{
                 return <CryptocurrenciesController></CryptocurrenciesController>;
 
             case "settings":
-                return <SettingsController></SettingsController>;
+                return <SettingsController userData={props.userData}></SettingsController>;
 
         }
     }
@@ -48,8 +51,18 @@ const HomeView = (props) =>{
     return(
 
         <div className="container">
+            {
 
-            <button className="container-add-transaction-button">
+                props.showAddTransactionMenu
+                    ?
+                        <AddTransactionMenuController 
+                            setShowAddTransactionMenu={props.setShowAddTransactionMenu}
+                            showAddTransactionMenu={props.showAddTransactionMenu}/>
+                    :
+                        null
+            }
+            
+            <button onClick={()=>{props.setShowAddTransactionMenu(true)}} className="container-add-transaction-button">
                 <IoIosAdd className="container-add-transaction-button-icon"></IoIosAdd>
             </button>
 
@@ -68,6 +81,16 @@ const HomeView = (props) =>{
                 props.menuOptionClicked == "dashboard"
                     ?
                         <div className="dashboard-container">
+
+                            {
+                                props.showTransactionDetails
+                                    ?
+                                        <div className="transaction-details-modal-container">
+                                            <TransactionDetailsController transactionData={props.clickedTransactionData} setShowTransactionDetails={props.setShowTransactionDetails} showTransactionDetails={props.showTransactionDetails}></TransactionDetailsController>
+                                        </div>
+                                    :
+                                        null
+                            }
 
                             <div className="box-1">
 
@@ -118,7 +141,7 @@ const HomeView = (props) =>{
 
                                             props.transactionsLimitedList.map((transaction, index)=>{
 
-                                                return <TransactionItemController transactionData={transaction} key={index}></TransactionItemController>
+                                                return <TransactionItemController openTransactionDetailsModal={props.openTransactionDetailsModal} transactionData={props.clickedTransactionData} key={index}></TransactionItemController>
                                             })
                                         }
                                     </div>
@@ -154,6 +177,7 @@ const HomeView = (props) =>{
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
                     :
                         RenderMenuOptionView()

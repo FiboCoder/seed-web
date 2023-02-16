@@ -21,7 +21,7 @@ const TransactionItemView = (props) =>{
 
     return(
 
-        <div className="transaction-item-container">
+        <button onClick={()=>{props.openTransactionDetailsModal(props.transactionData)}} className="transaction-item-container">
             <div className="transaction-item-subcontainer">
                 <div className={renderIconColorStyle()}>
                     <BsHandbag className="transaction-item-category-icon"></BsHandbag>
@@ -32,11 +32,11 @@ const TransactionItemView = (props) =>{
                     <span className="transaction-item-title-description">{props.transactionData.description}</span>
                 </div>
                     
-                <span className="transaction-item-value-text">{"R$" + Format.intToReal(props.transactionData.value)}</span>
+                <span className="transaction-item-value-text">{"R$" + props.transactionData.value}</span>
             </div>
 
             <div className="divider"></div>
-        </div>
+        </button>
     )
 }
 

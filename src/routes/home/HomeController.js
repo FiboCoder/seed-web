@@ -29,6 +29,12 @@ const HomeController = () =>{
 
     const { user } = useContext(AuthContext);
 
+    const [showTransactionDetails, setShowTransactionDetails] = useState(false);
+    const [clickedTransactionData, setClickedTransactionData] = useState([]);
+
+    const [showAddTransactionMenu, setShowAddTransactionMenu] = useState(false);
+
+
     const navigate = useNavigate();
 
     const chartTimeF = (chartTime) =>{
@@ -50,6 +56,12 @@ const HomeController = () =>{
                 setChartTimeListVisible(false);
                 break;
         }
+    }
+
+    const openTransactionDetailsModal = (clickedTransactionData) =>{
+
+        setClickedTransactionData(clickedTransactionData);
+        setShowTransactionDetails(!showTransactionDetails);
     }
 
     const fetchData = () =>{
@@ -838,14 +850,26 @@ const HomeController = () =>{
             setTransactionType={setTransactionType}
             setChartTimeListVisible={setChartTimeListVisible}
 
+            setClickedTransactionData={setClickedTransactionData}
+            setShowTransactionDetails={setShowTransactionDetails}
+
+            setShowAddTransactionMenu={setShowAddTransactionMenu}
+
             transactionType={transactionType}
             chartTime={chartTime}
             chartTimeF={chartTimeF}
             chartTimeListVisible={chartTimeListVisible}
 
+            clickedTransactionData={clickedTransactionData}
+            showTransactionDetails={showTransactionDetails}
+
+            openTransactionDetailsModal={openTransactionDetailsModal}
+
             dataToChart={dataToChart}
             transactionsList={transactionsList}
             transactionsLimitedList={transactionsLimitedList}
+
+            showAddTransactionMenu={showAddTransactionMenu}
         ></HomeView>
     )
 }

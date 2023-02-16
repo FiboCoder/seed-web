@@ -8,6 +8,18 @@
     padding: 40px;
 }
 
+.settings-loading-container{
+
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    right: 0px;
+    width: 84%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 .personal-settings-info-container{
 
     display: flex;
@@ -47,10 +59,23 @@
     margin-bottom: 60px;
 }
 
-.personal-settings-image-container{
+.personal-settings-image-profile-image{
 
     display: flex;
-    padding: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 26px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+
+}
+
+.personal-settings-image-container{
+
+    width: 120px;
+    height: 120px;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 26px;
@@ -75,6 +100,8 @@
     margin-top: -36px;
     padding: 8px;
     background-color: #1D1D1D;
+    outline: 0;
+    border: 0;
 }
 
 .personal-settings-change-image-icon-container:hover{
@@ -87,6 +114,8 @@
     margin-top: -36px;
     padding: 8px;
     background-color: #363636;
+    outline: 0;
+    border: 0;
     cursor: pointer;
 }
 
@@ -108,6 +137,19 @@
     margin-bottom: 8px;
     font-weight: 700;
 
+}
+
+.personal-settings-input-field{
+
+    width: 100%;
+    display: flex;
+    margin-right: 10px;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #E6E6E6;
+    border: 0px;
+    outline: 0px;
 }
 
 .personal-settings-field-container{
@@ -143,6 +185,19 @@
 }
 
 .personal-settings-field-pencil-icon:hover{
+
+    font-size: 24px;
+    cursor: pointer;
+    
+}
+
+.personal-settings-field-check-icon{
+
+    font-size: 22px;
+    
+}
+
+.personal-settings-field-check-icon:hover{
 
     font-size: 24px;
     cursor: pointer;

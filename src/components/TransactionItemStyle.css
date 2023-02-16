@@ -4,6 +4,10 @@
     flex-direction: column;
     align-items: center;
     align-self: stretch;
+    border: 0px;
+    outline: 0px;
+    background-color: transparent;
+
 }
 
 .transaction-item-container:hover{
