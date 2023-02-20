@@ -1,4 +1,4 @@
-import { collection, doc, getDocs, query, where } from "firebase/firestore";
+import { addDoc, collection, doc, getDocs, query, setDoc, where } from "firebase/firestore";
 import { db } from "./Firebase";
 
 export class Transaction{
@@ -54,5 +54,57 @@ export class Transaction{
                 });
             }
         });
+    }
+
+    static addTransaction(
+        email, 
+        type,
+        name, 
+        description, 
+        category, 
+        date, 
+        value,
+        transferType){
+
+            return new Promise((resolve, reject)=>{
+
+                if(type == "Transfer"){
+
+                    addDoc(collection(db, "users", email, "transactions"),{
+
+                        type,
+                        name,
+                        description,
+                        date,
+                        value,
+                        transferType
+                    }).then(result=>{
+    
+                        resolve(result);
+                    }).catch(err=>{
+    
+                        reject(err);
+                    });
+                }else{
+
+                    addDoc(collection(db, "users", email, "transactions"),{
+
+                        type,
+                        name,
+                        description,
+                        category,
+                        date,
+                        value
+                    }).then(result=>{
+    
+                        resolve(result);
+                    }).catch(err=>{
+    
+                        reject(err);
+                    });
+                }
+
+                
+            });
     }
 }

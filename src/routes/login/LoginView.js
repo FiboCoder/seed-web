@@ -1,6 +1,6 @@
 import "./LoginStyle.css";
 import { AiOutlineMail, AiOutlineLock } from "react-icons/ai";
-import Loading from "../../components/loading";
+import Loading from "../../components/Loading";
 import { Navigate } from "react-router-dom";
 
 const LoginView = (props) =>{

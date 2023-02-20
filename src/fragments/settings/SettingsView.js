@@ -1,7 +1,7 @@
 import "./SettingsStyle.css";
 import { AiOutlineUser, AiFillEdit, AiOutlineMail, AiOutlineLock, AiOutlineCheck } from "react-icons/ai";
 import { useRef, useState } from "react";
-import Loading from "../../components/loading";
+import Loading from "../../components/Loading";
 import LoadingFullScreen from "../../components/LoadingFullScreen";
 
 const SettingsView = (props) =>{

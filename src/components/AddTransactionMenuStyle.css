@@ -30,7 +30,7 @@
     background-color: white;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    padding: 20px;
+    padding: 30px;
     padding-top: 20px;
     box-sizing: border-box;
 }
@@ -101,22 +101,50 @@
     outline: 0;
 }
 
+.date-picker{
+
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.add-transaction-menu-error-message-text{
+
+    color: red;
+}
+
 .add-transaction-menu-button{
 
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     align-self: stretch;
-    margin-top: 30px;
-    padding: 10px;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    border-radius: 6px;
-    border: 0px;
-    outline: 0;
+    padding: 14px;
+    border-radius: 8px;
     background-color: #FF7E00;
+    border: 0;
+    margin-top: 10px;
     color: white;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
-}  
+}
+
+.add-transaction-menu-button-active{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-self: stretch;
+    padding: 6px;
+    border-radius: 8px;
+    background-color: #FF7E00;
+    border: 0;
+    margin-top: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}

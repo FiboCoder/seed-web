@@ -1,6 +1,6 @@
 import { AiOutlineLock, AiOutlineMail, AiOutlineUser } from "react-icons/ai";
 import { Navigate } from "react-router-dom";
-import Loading from "../../components/loading";
+import Loading from "../../components/Loading";
 import "./RegisterStyle.css";
 
 const RegisterView = (props) =>{

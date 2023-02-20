@@ -57,7 +57,8 @@ const HomeView = (props) =>{
                     ?
                         <AddTransactionMenuController 
                             setShowAddTransactionMenu={props.setShowAddTransactionMenu}
-                            showAddTransactionMenu={props.showAddTransactionMenu}/>
+                            showAddTransactionMenu={props.showAddTransactionMenu}
+                            userData={props.userData}/>
                     :
                         null
             }
