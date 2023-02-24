@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Format } from "../utils/Format";
 import { Transaction } from "../utils/Transaction";
 import AddTransactionMenuView from "./AddTransactionMenuView";
+import {User} from "../utils/User";
 
 const AddTransactionMenuController = (props) =>{
 
@@ -47,17 +48,42 @@ const AddTransactionMenuController = (props) =>{
                                         transactionName, 
                                         transactionDescription, 
                                         transactionDate.getTime(), 
-                                        Format.intToCurrency(transactionValue)).then(result=>{
-                            
-                                            setTransactionType("");
-                                            setTransferType("")
-                                            setTransactionName("");
-                                            setTransactionDescription("");
-                                            setTransactionCategory("");
-                                            setTransactionDate("");
-                                            setTransactionValue("");
-                                            setLoading(false);
-                                            props.setShowAddTransactionMenu(false);
+                                        Format.intToCurrency(transactionValue)
+                                    ).then(result=>{
+
+                                        let newBalance;
+                                        if(transferType == "sent"){
+
+                                            newBalance = parseFloat(props.userData.balance) - Format.intToCurrency(transactionValue);
+                                            User.updateData(props.userData.email, "balance", newBalance).then(result=>{
+
+                                                setTransactionType("");
+                                                setTransferType("")
+                                                setTransactionName("");
+                                                setTransactionDescription("");
+                                                setTransactionCategory("");
+                                                setTransactionDate("");
+                                                setTransactionValue("");
+                                                setLoading(false);
+                                                props.setShowAddTransactionMenu(false);
+                                            });
+
+                                        }else{
+
+                                            newBalance = parseFloat(props.userData.balance) + Format.intToCurrency(transactionValue);
+                                            User.updateData(props.userData.email, "balance", newBalance).then(result=>{
+
+                                                setTransactionType("");
+                                                setTransferType("")
+                                                setTransactionName("");
+                                                setTransactionDescription("");
+                                                setTransactionCategory("");
+                                                setTransactionDate("");
+                                                setTransactionValue("");
+                                                setLoading(false);
+                                                props.setShowAddTransactionMenu(false);
+                                            });
+                                        }
                                     });
                                 }else{
                         
@@ -95,6 +121,8 @@ const AddTransactionMenuController = (props) =>{
                             if(transactionDate != ""){
         
                                 if(transactionValue != ""){
+
+                                    
         
                                     Transaction.addTransaction(
                                         props.userData.email, 
@@ -104,15 +132,39 @@ const AddTransactionMenuController = (props) =>{
                                         transactionCategory, 
                                         transactionDate.getTime(), 
                                         Format.intToCurrency(transactionValue)).then(result=>{
-                            
-                                            setTransactionType("");
-                                            setTransactionName("");
-                                            setTransactionDescription("");
-                                            setTransactionCategory("");
-                                            setTransactionDate("");
-                                            setTransactionValue("");
-                                            setLoading(false);
-                                            props.setShowAddTransactionMenu(false);
+
+                                            let newBalance;
+                                            if(transactionType == "Earning"){
+
+                                                newBalance = parseFloat(props.userData.balance) + Format.intToCurrency(transactionValue);
+                                                User.updateData(props.userData.email, "balance", newBalance).then(result=>{
+
+                                                    setTransactionType("");
+                                                    setTransactionName("");
+                                                    setTransactionDescription("");
+                                                    setTransactionCategory("");
+                                                    setTransactionDate("");
+                                                    setTransactionValue("");
+                                                    setLoading(false);
+                                                    props.setShowAddTransactionMenu(false);
+                                                });
+                                            }else{
+
+                                                newBalance = parseFloat(props.userData.balance) - Format.intToCurrency(transactionValue);
+                                                User.updateData(props.userData.email, "balance", newBalance).then(result=>{
+
+                                                    setTransactionType("");
+                                                    setTransactionName("");
+                                                    setTransactionDescription("");
+                                                    setTransactionCategory("");
+                                                    setTransactionDate("");
+                                                    setTransactionValue("");
+                                                    setLoading(false);
+                                                    props.setShowAddTransactionMenu(false);
+                                                });
+                                            }
+                                            
+                                            
                                     });
                                 }else{
                         

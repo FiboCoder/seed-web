@@ -83,11 +83,13 @@
     flex-direction: column;
     justify-content: center;
     align-self: stretch;
-    margin-left: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
-.transaction-item-title-text{
+.transaction-item-title-name{
 
+    text-align: left;
     font-weight: 700;
     font-size: 16px;
     margin-bottom: 8px;
@@ -95,6 +97,7 @@
 
 .transaction-item-title-description{
 
+    text-align: left;
 
 }
 

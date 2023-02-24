@@ -269,6 +269,57 @@
     border: 0;
 }
 
+.home-chart-box-transactions-chart-time-container{
+
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+    border-radius: 6px;
+    background-color: #E6E6E6;
+}
+
+.home-chart-box-transactions-chart-time-item{
+
+    margin: 4px;
+    padding: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    color: gray;
+    font-weight: 600;
+}
+
+.home-chart-box-transactions-chart-time-item:hover{
+
+    margin: 4px;
+    padding: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0;
+    color: gray;
+    font-weight: 600;
+}
+
+.home-chart-box-transactions-chart-time-item-active{
+
+    margin: 4px;
+    padding: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #fdfdfd;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0;
+    font-weight: 600;
+    color: rgb(96, 96, 96);
+
+}
+
 .chart-top-time-select-container{
 
     display: flex;

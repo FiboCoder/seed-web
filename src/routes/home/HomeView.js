@@ -7,10 +7,13 @@ import CryptocurrenciesController from "../../fragments/cryptocurrencies/Cryptoc
 import SettingsController from "../../fragments/settings/SettingsController";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosAdd } from "react-icons/io";
+import { AiTwotoneCalendar } from "react-icons/ai";
 import ChartDash from "../../components/ChartDash";
 import TransactionDetails from "../../components/TransactionsDetails";
 import TransactionDetailsController from "../../components/TransactionDetailsController";
 import AddTransactionMenuController from "../../components/AddTransactionMenuController";
+import { Format } from "../../utils/Format";
+import CalendarSelectRangeController from "../../components/CalendarSelectRangeController";
 
 const HomeView = (props) =>{
 
@@ -84,6 +87,15 @@ const HomeView = (props) =>{
                         <div className="dashboard-container">
 
                             {
+
+                                props.calendarSelectRangeVisibility
+                                    ?
+                                        <CalendarSelectRangeController setCalendarSelectRangeVisibility={props.setCalendarSelectRangeVisibility} getCalendarSelectedRange={props.getCalendarSelectedRange}></CalendarSelectRangeController>
+                                    :
+                                        null
+                            }
+
+                            {
                                 props.showTransactionDetails
                                     ?
                                         <div className="transaction-details-modal-container">
@@ -107,7 +119,20 @@ const HomeView = (props) =>{
                                                 <button onClick={()=>{props.setTransactionType("Transfers")}} className={props.transactionType == "Transfers" ? "home-chart-box-transactions-title-text-active" : "home-chart-box-transactions-title-text"}>Transferências</button>
                                             </div>
 
-                                            <button onClick={()=>{props.setChartTimeListVisible(!props.chartTimeListVisible)}} className="chart-top-time-select-container">
+                                            <div className="home-chart-box-transactions-chart-time-container">
+
+                                                <button onClick={()=>{props.chartTimeF("1D")}} className={props.chartTime != "1D" ? "home-chart-box-transactions-chart-time-item" : "home-chart-box-transactions-chart-time-item-active"}>1D</button>
+                                                <button onClick={()=>{props.chartTimeF("7D")}} className={props.chartTime != "7D" ? "home-chart-box-transactions-chart-time-item" : "home-chart-box-transactions-chart-time-item-active"}>7D</button>
+                                                <button onClick={()=>{props.chartTimeF("1M")}} className={props.chartTime != "1M" ? "home-chart-box-transactions-chart-time-item" : "home-chart-box-transactions-chart-time-item-active"}>1M</button>
+                                                <button onClick={()=>{props.chartTimeF("3M")}} className={props.chartTime != "3M" ? "home-chart-box-transactions-chart-time-item" : "home-chart-box-transactions-chart-time-item-active"}>3M</button>
+                                                <button onClick={()=>{props.chartTimeF("6M")}} className={props.chartTime != "6M" ? "home-chart-box-transactions-chart-time-item" : "home-chart-box-transactions-chart-time-item-active"}>6M</button>
+                                                <button onClick={()=>{props.chartTimeF("1Y")}} className={props.chartTime != "1Y" ? "home-chart-box-transactions-chart-time-item" : "home-chart-box-transactions-chart-time-item-active"}>1A</button>
+                                                <button onClick={()=>{props.chartTimeF("C")}} className={props.chartTime != "C" ? "home-chart-box-transactions-chart-time-item" : "home-chart-box-transactions-chart-time-item-active"}>
+                                                    <AiTwotoneCalendar></AiTwotoneCalendar>
+                                                </button>
+                                            </div>
+
+                                            {/*<button onClick={()=>{props.setChartTimeListVisible(!props.chartTimeListVisible)}} className="chart-top-time-select-container">
                                                 <div className="chart-top-time-select-subcontainer">
                                                     <span className="chart-top-time-select-title">{props.chartTime}</span>
                                                     <IoIosArrowDown className="chart-top-time-select-icon"></IoIosArrowDown>
@@ -126,7 +151,7 @@ const HomeView = (props) =>{
                                                             null
                                                 }
                                                 
-                                            </button>
+                                            </button>*/}
                                         </div>
 
                                         <ChartDash dataToChart={props.dataToChart} chartTime={props.chartTime} transactionType={props.transactionType}></ChartDash>
@@ -142,7 +167,7 @@ const HomeView = (props) =>{
 
                                             props.transactionsLimitedList.map((transaction, index)=>{
 
-                                                return <TransactionItemController openTransactionDetailsModal={props.openTransactionDetailsModal} transactionData={props.clickedTransactionData} key={index}></TransactionItemController>
+                                                return <TransactionItemController openTransactionDetailsModal={props.openTransactionDetailsModal} transactionData={transaction} key={index}></TransactionItemController>
                                             })
                                         }
                                     </div>
@@ -161,7 +186,7 @@ const HomeView = (props) =>{
 
                                     <div className="card-bottom-container">
                                         <span className="card-bottom-text-fixed">Visão geral da sua carteira</span>
-                                        <span className="card-bottom-value">R$ {props.userData ? props.userData.balance : "R$0,00"}</span>
+                                        <span className="card-bottom-value">R$ {props.userData ? Format.intToReal(parseFloat(props.userData.balance).toFixed(2)) : "0,00"}</span>
                                     </div>
                                 </div>
 

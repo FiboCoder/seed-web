@@ -39,18 +39,25 @@ export class Format{
 
     static intToReal(value){
 
-        let fValue = value.replace(/\D/g, "");
-        fValue = fValue.replace(/(\d)(\d{2})$/, "$1,$2");
-        fValue = fValue.replace(/(?=(\d{3})+(\D))\B/g, ".");
 
-        return fValue;
+        if(value){
+
+            let fValue = value.replace(/\D/g, "");
+            fValue = fValue.replace(/(\d)(\d{2})$/, "$1,$2");
+            fValue = fValue.replace(/(?=(\d{3})+(\D))\B/g, ".");
+            
+            return fValue;
+        }
     }
 
     static intToCurrency(value){
 
-        let fValue = value.replace(/\D/g, "");
-        fValue = fValue.replace(/(\d)(\d{2})$/, "$1.$2");
+        if(value){
 
-        return fValue;
+            let fValue = value.replace(/\D/g, "");
+            fValue = fValue.replace(/(\d)(\d{2})$/, "$1.$2");
+    
+            return fValue;
+        }
     }
 }

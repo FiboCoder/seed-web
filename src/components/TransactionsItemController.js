@@ -2,12 +2,14 @@ import TransactionItemView from "./TransasctionItemView";
 
 const TransactionItemController = (props) =>{
 
-    console.log("NAME"+props.transactionData.name)
+    const openTransactionDetailsModalF = () =>{
 
+
+    }
 
     return(
 
-        <TransactionItemView openTransactionDetailsModal={props.openTransactionDetailsModal} setClickedTransactionData={props.setClickedTransactionData} transactionData={props.transactionData}></TransactionItemView>
+        <TransactionItemView openTransactionDetailsModal={props.openTransactionDetailsModal} transactionData={props.transactionData}></TransactionItemView>
     );
 }
 

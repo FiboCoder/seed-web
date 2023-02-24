@@ -17,7 +17,8 @@ const HomeController = () =>{
 
     const [transactionType, setTransactionType] = useState("Spendings");
     const [chartTime, setChartTime] = useState("Semana");
-    const [chartTimeListVisible, setChartTimeListVisible] = useState(false);
+    const [selectedDate, setSelectedDate] = useState([]);
+    const [calendarSelectRangeVisibility, setCalendarSelectRangeVisibility] = useState(false);
 
     const [eSum, setESum] = useState();
     const [sSum, setSSum] = useState();
@@ -41,21 +42,41 @@ const HomeController = () =>{
 
         switch(chartTime){
 
-            case "week":
-                setChartTime("Semana");
-                setChartTimeListVisible(false);
+            case "1D":
+                setChartTime("1D");
                 break;
 
-            case "month":
-                setChartTime("Mês");
-                setChartTimeListVisible(false);
+            case "7D":
+                setChartTime("7D");
                 break;
 
-            case "year":
-                setChartTime("Ano");
-                setChartTimeListVisible(false);
+            case "1M":
+                setChartTime("1M");
+                break;
+
+            case "3M":
+                setChartTime("3M");
+                break;
+
+            case "6M":
+                setChartTime("6M");
+                break;
+
+            case "1Y":
+                setChartTime("1Y");
+                break;
+
+            case "C":
+                setChartTime("C");
+                setCalendarSelectRangeVisibility(true);
                 break;
         }
+    }
+
+    const getCalendarSelectedRange = (startDate, endDate) =>{
+
+        setSelectedDate([startDate.getTime(), endDate.getTime()]);
+        setCalendarSelectRangeVisibility(false);
     }
 
     const openTransactionDetailsModal = (clickedTransactionData) =>{
@@ -819,10 +840,11 @@ const HomeController = () =>{
                     transactions.forEach(transaction=>{
 
                         transactionsArray.push(transaction.data());
+                        console.log(transaction.data().name)
                     });
 
                     setTransactionsList(transactionsArray);
-                    setTransactionsLimitedList(transactionsArray.slice(0, 10));
+                    setTransactionsLimitedList(transactionsArray);
                 }
             });
 
@@ -835,7 +857,7 @@ const HomeController = () =>{
     useEffect(()=>{
 
         fetchData();
-    },[chartTime, transactionType]);
+    },[chartTime, selectedDate, transactionType]);
 
     return(
 
@@ -848,7 +870,7 @@ const HomeController = () =>{
             menuOptionClicked={menuOptionClicked}
 
             setTransactionType={setTransactionType}
-            setChartTimeListVisible={setChartTimeListVisible}
+            setCalendarSelectRangeVisibility={setCalendarSelectRangeVisibility}
 
             setClickedTransactionData={setClickedTransactionData}
             setShowTransactionDetails={setShowTransactionDetails}
@@ -858,7 +880,7 @@ const HomeController = () =>{
             transactionType={transactionType}
             chartTime={chartTime}
             chartTimeF={chartTimeF}
-            chartTimeListVisible={chartTimeListVisible}
+            calendarSelectRangeVisibility={calendarSelectRangeVisibility}
 
             clickedTransactionData={clickedTransactionData}
             showTransactionDetails={showTransactionDetails}
@@ -870,6 +892,8 @@ const HomeController = () =>{
             transactionsLimitedList={transactionsLimitedList}
 
             showAddTransactionMenu={showAddTransactionMenu}
+
+            getCalendarSelectedRange={getCalendarSelectedRange}
         ></HomeView>
     )
 }

@@ -62,6 +62,18 @@ export class User{
     
                     reject(err);
                 });
+            }else if(type == "balance"){
+
+                updateDoc(doc(db, "users", email),{
+
+                    balance: data
+                }).then(result=>{
+
+                    resolve(result);
+                }).catch(err=>{
+                    
+                    reject(err);
+                });
             }
         });
     }

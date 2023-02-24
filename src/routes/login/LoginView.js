@@ -7,8 +7,10 @@ const LoginView = (props) =>{
 
     return(
 
-        <div className="login-container">
-            <div className="login-image-box-container"></div>
+        <div className="login-container-main">
+            
+            <div className="login-container">
+            
             <div className="login-box-container">
                 <div className="login-box-subcontainer">
 
@@ -43,7 +45,12 @@ const LoginView = (props) =>{
                     <span className="login-box-no-have-account-text-1">Não tem conta? <button onClick={()=>{<Navigate to={"/register"}/>}} className="login-box-no-have-account-text-2">Cadastre-se</button></span>
                 </div>
             </div>
+            </div>
+            <div className="login-image-box-container">
+                <img className="image" src={"back2.jpg"}></img>
+            </div>
         </div>
+        
     )
 }
 

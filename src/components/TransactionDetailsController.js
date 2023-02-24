@@ -2,8 +2,6 @@ import TransactionDetails from "./TransactionsDetails"
 
 const TransactionDetailsController = (props) =>{
 
-    console.log("CLICKED TRANSACTION DATA  -  ")
-
     return(
 
         <TransactionDetails 

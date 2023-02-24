@@ -1,9 +1,17 @@
+.transaction-details-container-main{
+
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 .transaction-details-container{
 
-    width: 100%;
+    width: 75%;
     height: 100%;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: transparent;
     overflow-y: hidden;
     outline: 0px;
     border: 0px;
@@ -14,15 +22,22 @@
     
     display: flex;
     box-sizing: border-box;
+    width: 25%;
     height: 100%;
     position: absolute;
-    justify-content: space-between;
     right: 0px;
     padding: 20px;
-    flex-direction: row;
+    flex-direction: column;
     background-color: white;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+}
+
+.transaction-details-top-container{
+
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 60px;
 }
 
 .transaction-details-left-container{
@@ -41,18 +56,13 @@
     cursor: pointer;
 }
 
-.transaction-details-right-container{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-
 .transaction-details-title{
 
+    width: 100%;
+    text-align: center;
     font-size: 18px;
     margin-top: 3px;
+
 }
 
 .transaction-details-close-icon{
@@ -65,32 +75,59 @@
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
-    align-items: center;
-    padding: 40px;
+    padding: 10px;
+    align-items: flex-start;
+}
+
+.transaction-details-title-text{
+
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #828282;
 }
 
 .transactions-details-category-text{
 
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
     
 }
 
 .transactions-details-name-text{
 
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
 
 }
 
 .transactions-details-description-text{
 
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
 
 }
 
 .transactions-details-transfer-type-text{
 
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
 
 }
 
 .transactions-details-value-text{
 
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
 
+}
+
+.divider{
+
+    margin-bottom: 30px;
+    background-color: #CBCBCB;
 }
